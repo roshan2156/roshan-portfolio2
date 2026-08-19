@@ -583,7 +583,7 @@
         }
 
         /* ================================================ */
-        /* SKILLS SECTION */
+        /* SKILLS SECTION - UPDATED WITH ALL SKILLS */
         /* ================================================ */
         .skills-section {
             padding: 60px 0 80px;
@@ -1155,6 +1155,96 @@
             color: var(--muted);
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        /* Zomato Demo */
+        .zomato-demo {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+        }
+
+        .zomato-demo .z-box {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0.6rem;
+            text-align: center;
+        }
+
+        .zomato-demo .z-box .z-num {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .zomato-demo .z-box .z-num.green { color: #4ade80; }
+        .zomato-demo .z-box .z-num.blue { color: #60a5fa; }
+        .zomato-demo .z-box .z-num.purple { color: #a78bfa; }
+
+        .zomato-demo .z-box .z-label {
+            font-size: 0.55rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .zomato-demo .z-full {
+            grid-column: 1 / -1;
+            background: rgba(94, 234, 212, 0.05);
+            border: 1px solid rgba(94, 234, 212, 0.1);
+            border-radius: 10px;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        .zomato-demo .z-full span {
+            color: var(--accent);
+            font-size: 0.7rem;
+        }
+
+        /* Vrinda Store Demo */
+        .vrinda-demo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .vrinda-demo .v-box {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0.6rem;
+            text-align: center;
+        }
+
+        .vrinda-demo .v-box .v-num {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .vrinda-demo .v-box .v-num.green { color: #4ade80; }
+        .vrinda-demo .v-box .v-num.blue { color: #60a5fa; }
+        .vrinda-demo .v-box .v-num.purple { color: #a78bfa; }
+
+        .vrinda-demo .v-box .v-label {
+            font-size: 0.55rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .vrinda-demo .v-full {
+            grid-column: 1 / -1;
+            background: rgba(94, 234, 212, 0.05);
+            border: 1px solid rgba(94, 234, 212, 0.1);
+            border-radius: 10px;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        .vrinda-demo .v-full span {
+            color: var(--accent);
+            font-size: 0.7rem;
         }
 
         /* ================================================ */
@@ -1737,6 +1827,18 @@
                 font-size: 0.75rem;
                 padding: 0.3rem 0.8rem;
             }
+            .zomato-demo {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .zomato-demo .z-box .z-num {
+                font-size: 0.9rem;
+            }
+            .vrinda-demo {
+                grid-template-columns: 1fr 1fr;
+            }
+            .vrinda-demo .v-box .v-num {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -1833,7 +1935,7 @@
                     </div>
                     <div class="float-stats">
                         <div class="stat-item"><strong>91%</strong><span>Accuracy</span></div>
-                        <div class="stat-item"><strong>4+</strong><span>Projects</span></div>
+                        <div class="stat-item"><strong>5+</strong><span>Projects</span></div>
                         <div class="stat-item"><strong>RAG</strong><span>LangGraph</span></div>
                     </div>
                 </div>
@@ -1884,17 +1986,18 @@
         </div>
     </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
+    <!-- ===== SKILLS SECTION - UPDATED ===== -->
     <section class="skills-section" id="skills-section">
         <div class="container">
             <div class="section-label"><span class="line"></span>/ 02</div>
             <div class="section-title">The stack I reach for — from raw data wrangling to <span class="highlight">production-grade generative systems</span>.</div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <div class="cat-title"><i class="fas fa-code" style="margin-right:8px;"></i> PROGRAMMING &amp; ANALYTICS</div>
+                    <div class="cat-title"><i class="fas fa-code" style="margin-right:8px;"></i> PROGRAMMING &amp; QUERYING</div>
                     <div class="skill-tags">
                         <span class="skill-tag"><i class="fas fa-circle"></i> Python</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> SQL</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Git/GitHub</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> HTML</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> CSS</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> JavaScript</span>
@@ -1906,37 +2009,46 @@
                         <span class="skill-tag"><i class="fas fa-circle"></i> NumPy</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> Pandas</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> Matplotlib</span>
-                        <span class="skill-tag"><i class="fas fa-circle"></i> Plotly</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Seaborn</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> SciPy</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> Scikit-learn</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> TensorFlow</span>
-                        <span class="skill-tag"><i class="fas fa-circle"></i> Data Cleaning</span>
-                        <span class="skill-tag"><i class="fas fa-circle"></i> Data Preprocessing</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> XGBoost</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> LightGBM</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> EDA</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> Feature Engineering</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> Statistical Analysis</span>
-                        <span class="skill-tag"><i class="fas fa-circle"></i> Data Visualization</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Hypothesis Testing</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> Regression</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> Classification</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Clustering</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> LSTM</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Ensemble Methods</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Hyperparameter Tuning</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Cross-Validation</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <div class="cat-title"><i class="fas fa-brain" style="margin-right:8px;"></i> GENERATIVE AI &amp; LLMS</div>
+                    <div class="cat-title"><i class="fas fa-brain" style="margin-right:8px;"></i> NLP &amp; GENERATIVE AI</div>
                     <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-circle"></i> NLP Fundamentals</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Hugging Face Transformers</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> LLMs</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Prompt Engineering</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Embeddings</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Vector Databases</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> RAG</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> LangChain</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> LangGraph</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> LlamaIndex</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> OpenAI API</span>
-                        <span class="skill-tag"><i class="fas fa-circle"></i> Google Gemini API</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> Groq LLM</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> ChromaDB</span>
-                        <span class="skill-tag"><i class="fas fa-circle"></i> Prompt Engineering</span>
-                        <span class="skill-tag"><i class="fas fa-circle"></i> RAG</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> Semantic Search</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <div class="cat-title"><i class="fas fa-chart-pie" style="margin-right:8px;"></i> BI &amp; DATA ANALYTICS</div>
+                    <div class="cat-title"><i class="fas fa-chart-pie" style="margin-right:8px;"></i> DATA ANALYTICS &amp; BI</div>
                     <div class="skill-tags">
                         <span class="skill-tag"><i class="fas fa-circle"></i> Power BI</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> DAX</span>
@@ -1946,18 +2058,30 @@
                         <span class="skill-tag"><i class="fas fa-circle"></i> Pivot Tables</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> Dashboard Development</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> KPI Reporting</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Data Warehousing</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> ETL Processes</span>
                     </div>
                 </div>
-                <div class="skill-category" style="grid-column: 1 / -1;">
-                    <div class="cat-title"><i class="fas fa-tools" style="margin-right:8px;"></i> TOOLS &amp; FRAMEWORKS</div>
+                <div class="skill-category">
+                    <div class="cat-title"><i class="fas fa-tools" style="margin-right:8px;"></i> DEPLOYMENT &amp; MLOPS</div>
                     <div class="skill-tags">
                         <span class="skill-tag"><i class="fas fa-circle"></i> Flask</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> FastAPI</span>
                         <span class="skill-tag"><i class="fas fa-circle"></i> Streamlit</span>
-                        <span class="skill-tag"><i class="fas fa-circle"></i> Git</span>
-                        <span class="skill-tag"><i class="fas fa-circle"></i> GitHub</span>
-                        <span class="skill-tag"><i class="fas fa-circle"></i> Jupyter Notebook</span>
-                        <span class="skill-tag"><i class="fas fa-circle"></i> VS Code</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> REST APIs</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Docker (basics)</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Git/GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> CI/CD (basics)</span>
+                    </div>
+                </div>
+                <div class="skill-category" style="grid-column: 1 / -1;">
+                    <div class="cat-title"><i class="fas fa-robot" style="margin-right:8px;"></i> DEEP LEARNING</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Neural Networks</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> CNN</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> RNN/LSTM</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Transformers</span>
+                        <span class="skill-tag"><i class="fas fa-circle"></i> Transfer Learning</span>
                     </div>
                 </div>
             </div>
@@ -2008,7 +2132,7 @@
             <div class="section-label"><span class="line"></span>/ 04</div>
             <div class="section-title">Featured <span class="highlight">Projects</span></div>
             <div class="projects-grid">
-                <!-- Project 1 -->
+                <!-- Project 1: RAG Chatbot -->
                 <div class="project-row">
                     <div class="project-demo">
                         <div class="demo-header">
@@ -2037,7 +2161,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
+
+                <!-- Project 2: Smart Energy -->
                 <div class="project-row reverse">
                     <div class="project-demo">
                         <div class="demo-header">
@@ -2062,7 +2187,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project 3 -->
+
+                <!-- Project 3: Cost Forecasting -->
                 <div class="project-row">
                     <div class="project-demo">
                         <div class="demo-header">
@@ -2083,7 +2209,8 @@
                         <div class="project-actions"><a href="#" class="github-link"><i class="fab fa-github"></i> Source Code</a></div>
                     </div>
                 </div>
-                <!-- Project 4 -->
+
+                <!-- Project 4: PhonePe Dashboard -->
                 <div class="project-row reverse">
                     <div class="project-demo">
                         <div class="demo-header">
@@ -2104,6 +2231,68 @@
                         <div class="project-actions"><a href="#" class="github-link"><i class="fab fa-github"></i> Source Code</a></div>
                     </div>
                 </div>
+
+                <!-- Project 5: Zomato Restaurant Clustering -->
+                <div class="project-row">
+                    <div class="project-demo">
+                        <div class="demo-header">
+                            <div class="dots"><span></span><span></span><span></span></div>
+                            <span class="demo-title">Zomato Clustering</span>
+                        </div>
+                        <div class="zomato-demo">
+                            <div class="z-box"><div class="z-num green">82%</div><div class="z-label">Sentiment Accuracy</div></div>
+                            <div class="z-box"><div class="z-num blue">0.52</div><div class="z-label">DBSCAN Silhouette</div></div>
+                            <div class="z-box"><div class="z-num purple">10K+</div><div class="z-label">Reviews</div></div>
+                            <div class="z-full"><span><i class="fas fa-check-circle"></i> K-Means · Agglomerative · DBSCAN</span></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number">05</div>
+                        <div class="project-title">Zomato Restaurant <span class="highlight">Clustering</span></div>
+                        <div class="project-desc">
+                            Conducted EDA and hypothesis testing on 10,000+ reviews across 105 restaurants. Built and compared K-Means, Agglomerative, and DBSCAN clustering models. Developed TF-IDF + Logistic Regression sentiment analysis with 82% accuracy. Deployed interactive Streamlit web application.
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span>
+                            <span>Matplotlib</span><span>Seaborn</span><span>SciPy</span><span>TF-IDF</span>
+                            <span>Logistic Regression</span><span>K-Means</span><span>DBSCAN</span><span>PCA</span><span>Streamlit</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/roshan2156/Zomato-Restaurant-Clustering-using-Unsupervised-Machine.git" class="github-link" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Vrinda Store Data Analysis Dashboard -->
+                <div class="project-row reverse">
+                    <div class="project-demo">
+                        <div class="demo-header">
+                            <div class="dots"><span></span><span></span><span></span></div>
+                            <span class="demo-title">Vrinda Store Dashboard</span>
+                        </div>
+                        <div class="vrinda-demo">
+                            <div class="v-box"><div class="v-num green">64%</div><div class="v-label">Women Sales</div></div>
+                            <div class="v-box"><div class="v-num blue">₹2.99M</div><div class="v-label">Top State (Maharashtra)</div></div>
+                            <div class="v-box"><div class="v-num purple">92%</div><div class="v-label">Delivered</div></div>
+                            <div class="v-box"><div class="v-num">36%</div><div class="v-label">Men Sales</div></div>
+                            <div class="v-full"><span><i class="fas fa-check-circle"></i> Excel · Pivot Tables · Pivot Charts · Slicers</span></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number">06</div>
+                        <div class="project-title">Vrinda Store <span class="highlight">Data Analysis Dashboard</span></div>
+                        <div class="project-desc">
+                            Conducted sales data analysis using Excel, Pivot Tables, Pivot Charts, and slicers. Carried out data preprocessing and statistical analysis to identify customer purchasing behavior and top-performing sales channels. Built an interactive business intelligence dashboard to support strategic decision-making. Analyzed state-wise sales trends and customer demographics to generate business insights.
+                        </div>
+                        <div class="project-tech">
+                            <span>Microsoft Excel</span><span>Pivot Tables</span><span>Pivot Charts</span><span>Slicers</span><span>Business Intelligence</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="github-link"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -2128,7 +2317,7 @@
                     <div class="edu-meta">Full-stack data science training</div>
                     <div class="edu-meta">Trained across the full data lifecycle — from raw ingestion to production-ready intelligence</div>
                     <div class="edu-year">Hands-on Experience</div>
-                    <div class="edu-cgpa">Projects: <span>4+</span></div>
+                    <div class="edu-cgpa">Projects: <span>6+</span></div>
                 </div>
             </div>
         </div>
@@ -2303,15 +2492,17 @@ Computer Science and Engineering graduate with hands-on experience across Data A
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 SKILLS
-Programming & Analytics: Python, SQL, HTML, CSS, JavaScript
+Programming & Querying: Python, SQL, Git/GitHub, HTML, CSS, JavaScript
 
-Data Science & Machine Learning: NumPy, Pandas, Matplotlib, Plotly, Scikit-learn, TensorFlow, Data Cleaning, Data Preprocessing, EDA, Feature Engineering, Statistical Analysis, Data Visualization, Regression, Classification, LSTM
+Data Science & Machine Learning: NumPy, Pandas, Matplotlib, Seaborn, SciPy, Scikit-learn, TensorFlow, XGBoost, LightGBM, EDA, Feature Engineering, Statistical Analysis, Hypothesis Testing, Regression, Classification, Clustering, LSTM, Ensemble Methods, Hyperparameter Tuning, Cross-Validation
 
-Generative AI & LLMs: LangChain, LangGraph, LlamaIndex, OpenAI API, Google Gemini API, Groq LLM, ChromaDB, Prompt Engineering, RAG, Semantic Search
+NLP & Generative AI: NLP Fundamentals, Hugging Face Transformers, LLMs, Prompt Engineering, Embeddings, Vector Databases, RAG, LangChain, LangGraph, LlamaIndex, OpenAI API, Groq LLM, ChromaDB, Semantic Search
 
-BI & Data Analytics: Power BI, DAX, Power Query, Tableau, Excel (Pivot Tables, XLOOKUP, INDEX-MATCH, SUMIFS/COUNTIFS), Dashboard Development, KPI Reporting
+Data Analytics & BI: Power BI, DAX, Power Query, Tableau, Excel (Pivot Tables, XLOOKUP, INDEX-MATCH, SUMIFS/COUNTIFS), Dashboard Development, KPI Reporting, Data Warehousing, ETL Processes
 
-Tools & Frameworks: Flask, FastAPI, Streamlit, Git, GitHub, Jupyter Notebook, VS Code
+Deployment & MLOps: Flask, FastAPI, Streamlit, REST APIs, Docker (basics), Git/GitHub, CI/CD (basics)
+
+Deep Learning: Neural Networks, CNN, RNN/LSTM, Transformers, Transfer Learning
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -2352,6 +2543,21 @@ PROJECTS
    • Built an interactive Power BI dashboard analyzing 8K+ transactions and ₹29.65M+ transaction value
    • Performed data cleaning, transformation, data modeling, DAX calculations, and KPI development
    • Identified Insurance as the highest-performing service and analyzed user behavior and transaction trends
+
+5. Zomato Restaurant Clustering using Unsupervised Machine Learning
+   • Conducted EDA and hypothesis testing on 10,000+ reviews across 105 restaurants
+   • Built and compared K-Means, Agglomerative, and DBSCAN clustering models; selected DBSCAN (0.52 Silhouette)
+   • Built TF-IDF + Logistic Regression sentiment analysis model achieving 82% accuracy
+   • Deployed interactive Streamlit web application
+   • Technologies: Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, SciPy, TF-IDF, Logistic Regression, K-Means, DBSCAN, PCA, Streamlit
+   • GitHub: https://github.com/roshan2156/Zomato-Restaurant-Clustering-using-Unsupervised-Machine.git
+
+6. Vrinda Store Data Analysis Dashboard
+   • Conducted sales data analysis using Excel, Pivot Tables, Pivot Charts, and slicers
+   • Carried out data preprocessing and statistical analysis to identify customer purchasing behavior and top-performing sales channels
+   • Built an interactive business intelligence dashboard to support strategic decision-making
+   • Analyzed state-wise sales trends and customer demographics to generate business insights
+   • Technologies: Microsoft Excel, Pivot Tables, Pivot Charts, Slicers, Business Intelligence
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
